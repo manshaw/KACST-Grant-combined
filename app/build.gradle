@@ -10,7 +10,7 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "cz.covid19cz.erouska"
+        applicationId "pk.covid19sa.proxim"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.commitCount()

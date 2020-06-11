@@ -1,50 +1,63 @@
 {
   "project_info": {
-    "project_number": "941144972907",
-    "firebase_url": "https://daring-leaf-272223.firebaseio.com",
-    "project_id": "daring-leaf-272223",
-    "storage_bucket": "daring-leaf-272223.appspot.com"
+    "project_number": "153624296185",
+    "firebase_url": "https://blue-proximity.firebaseio.com",
+    "project_id": "blue-proximity",
+    "storage_bucket": "blue-proximity.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:941144972907:android:937903c1584d72a673db2e",
+        "mobilesdk_app_id": "1:153624296185:android:b178a23d73c93286138028",
         "android_client_info": {
-          "package_name": "cz.covid19cz.erouska"
+          "package_name": "pk.covid19sa.proxim"
         }
       },
       "oauth_client": [
         {
-          "client_id": "941144972907-n11bsjourafod10sin5fomirse6crnfa.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "cz.covid19cz.erouska",
-            "certificate_hash": "ef76fa2a3481eccda91db9777d375d91456898d2"
-          }
-        },
-        {
-          "client_id": "941144972907-r2kuhq8prsgdi48ldkhg5oqv6hiianuu.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "cz.covid19cz.erouska",
-            "certificate_hash": "fc5858910faaf9e981cba216e0180a92655f6db7"
-          }
-        },
-        {
-          "client_id": "941144972907-32illceaaugnl3dhe54kuv5d75e2unk8.apps.googleusercontent.com",
+          "client_id": "153624296185-6k1nu1bd0mfsbg3um7rfj5ejvsnfmhok.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDRe2nIq_Z0sbEp10Sh52v6TkBUdmDzHoA"
+          "current_key": "AIzaSyBEkSDEaGCBhE9MOsBH4qSnWA5zVZQKMOE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "941144972907-32illceaaugnl3dhe54kuv5d75e2unk8.apps.googleusercontent.com",
+              "client_id": "153624296185-6k1nu1bd0mfsbg3um7rfj5ejvsnfmhok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153624296185:android:6a961318984868a7138028",
+        "android_client_info": {
+          "package_name": "pk.covid19sa.proxim.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153624296185-6k1nu1bd0mfsbg3um7rfj5ejvsnfmhok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEkSDEaGCBhE9MOsBH4qSnWA5zVZQKMOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153624296185-6k1nu1bd0mfsbg3um7rfj5ejvsnfmhok.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
