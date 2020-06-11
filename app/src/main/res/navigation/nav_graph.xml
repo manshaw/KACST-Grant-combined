@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_welcome_fragment">
+
+    <fragment
+        android:id="@+id/nav_welcome_fragment"
+        android:name="cz.covid19cz.erouska.ui.welcome.WelcomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_nav_welcome_fragment_to_nav_dashboard"
+            app:destination="@id/nav_dashboard"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_welcome_fragment_to_nav_help"
+            app:destination="@id/nav_help"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_welcome_fragment_to_nav_bt_onboard"
+            app:destination="@id/nav_permission_onboard"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_welcome_fragment_to_nav_login"
+            app:destination="@id/nav_login"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="fullscreen"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_sandbox"
+        android:name="cz.covid19cz.erouska.ui.sandbox.SandboxFragment"
+        android:label="Test"
+        tools:layout="@layout/fragment_sandbox">
+        <action
+            android:id="@+id/action_nav_sandbox_to_nav_bt_disabled"
+            app:destination="@id/nav_permisions_disabled"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_sandbox_to_nav_login"
+            app:destination="@id/nav_login"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_nav_sandbox_to_nav_my_data"
+            app:destination="@id/nav_my_data"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_nav_sandbox_to_nav_welcome_fragment"
+            app:destination="@id/nav_welcome_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_welcome_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="cz.covid19cz.erouska.ui.help.HelpFragment"
+        android:label="@string/help_toolbar_title"
+        tools:layout="@layout/fragment_help" >
+        <argument
+            android:name="type"
+            android:defaultValue="HELP"
+            app:argType="cz.covid19cz.erouska.ui.help.InfoType" />
+
+        <argument
+            android:name="fullscreen"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_nav_help_to_nav_about"
+            app:destination="@id/nav_about"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_permisions_disabled"
+        android:name="cz.covid19cz.erouska.ui.permissions.PermissionsDisabledFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_permissionss_disabled">
+        <action
+            android:id="@+id/action_nav_bt_disabled_to_nav_dashboard"
+            app:destination="@id/nav_dashboard"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="cz.covid19cz.erouska.ui.dashboard.DashboardFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_bt_disabled"
+            app:destination="@id/nav_permisions_disabled"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_deleteDataFragment"
+            app:destination="@id/nav_delete_data"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_deleteUserFragment"
+            app:destination="@id/nav_delete_user"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_welcome_fragment"
+            app:destination="@id/nav_welcome_fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_login"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/nav_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_permission_onboard"
+        android:name="cz.covid19cz.erouska.ui.permissions.onboarding.PermissionsOnboardingFragment"
+        android:label="@string/permission_onboarding_toolbar_title"
+        tools:layout="@layout/fragment_permissions_onboarding">
+        <action
+            android:id="@+id/action_nav_bt_onboard_to_nav_login"
+            app:destination="@id/nav_login"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_welcome_fragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="fullscreen"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="cz.covid19cz.erouska.ui.login.LoginFragment"
+        android:label="@string/login_toolbar_title"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_nav_login_to_nav_dashboard"
+            app:destination="@id/nav_dashboard"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="fullscreen"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_nav_login_to_batteryOptimizationFragment"
+            app:destination="@id/nav_battery_optimization"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_data"
+        android:name="cz.covid19cz.erouska.ui.mydata.MyDataFragment"
+        android:label="@string/my_data_title">
+        <action
+            android:id="@+id/action_nav_my_data_to_nav_send_data"
+            app:destination="@id/nav_send_data"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_nav_my_data_to_nav_guide"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/nav_guide" />
+        <action
+            android:id="@+id/action_nav_my_data_to_nav_help"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/nav_help" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="cz.covid19cz.erouska.ui.contacts.ContactsFragment"
+        android:label="@string/contacts_title"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/nav_alert"
+        android:name="arch.view.AlertDialogFragment"
+        android:label="AlertDialogFragment" />
+    <fragment
+        android:id="@+id/nav_delete_data"
+        android:name="cz.covid19cz.erouska.ui.confirm.DeleteDataFragment"
+        android:label="@string/delete_data">
+        <action
+            android:id="@+id/action_nav_delete_data_to_nav_delete_data_success"
+            app:destination="@id/nav_delete_data_success"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_my_data" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_delete_user"
+        android:name="cz.covid19cz.erouska.ui.confirm.DeleteUserFragment"
+        android:label="@string/delete_registration">
+        <action
+            android:id="@+id/action_nav_delete_user_to_nav_delete_user_success"
+            app:destination="@id/nav_delete_user_success"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_send_data"
+        android:name="cz.covid19cz.erouska.ui.confirm.SendDataFragment"
+        android:label="@string/send_data">
+        <action
+            android:id="@+id/action_nav_send_data_to_nav_send_data_success"
+            app:destination="@id/nav_send_data_success"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_my_data" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_delete_data_success"
+        android:name="cz.covid19cz.erouska.ui.success.DeleteDataSuccessFragment"
+        android:label="@string/delete_data" />
+    <fragment
+        android:id="@+id/nav_delete_user_success"
+        android:name="cz.covid19cz.erouska.ui.success.DeleteUserSuccessFragment"
+        android:label="@string/delete_registration">
+        <action
+            android:id="@+id/action_nav_delete_user_success_to_nav_welcome_fragment"
+            app:destination="@id/nav_graph"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="fullscreen"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_send_data_success"
+        android:name="cz.covid19cz.erouska.ui.success.SendDataSuccessFragment"
+        android:label="@string/data_sent" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="cz.covid19cz.erouska.ui.about.AboutFragment"
+        android:label="@string/about_title"
+        tools:layout="@layout/fragment_about">
+        <action
+            android:id="@+id/action_nav_about_to_nav_sandbox"
+            app:destination="@id/nav_sandbox"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <argument
+            android:name="fullscreen"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_battery_optimization"
+        android:name="cz.covid19cz.erouska.ui.help.BatteryOptimizationFragment"
+        android:label="@string/battery_opt_label">
+        <action
+            android:id="@+id/action_batteryOptimizationFragment_to_nav_dashboard"
+            app:destination="@id/nav_dashboard"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <argument
+            android:name="fullscreen"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_nav_battery_optimization_to_nav_guide"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/nav_guide" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_guide"
+        android:name="cz.covid19cz.erouska.ui.help.GuideFragment"
+        android:label="@string/guide" />
+
+</navigation>

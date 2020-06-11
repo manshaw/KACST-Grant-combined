@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2f80ed</color>
+    <color name="colorPrimaryVariant">#2874ed</color>
+    <color name="colorSecondary">#EE225B</color>
+    <color name="colorSurface">@color/white</color>
+    <color name="colorOnSurface">#717171</color>
+
+    <color name="textColorPrimary">#000</color>
+    <color name="textColorSecondary">#444</color>
+
+    <color name="white">#fff</color>
+    <color name="red">#ff0000</color>
+    <color name="redDark">#d81d49</color>
+    <color name="green">#8cc23f</color>
+    <color name="orange">#DB7627</color>
+
+    <color name="exposition_level_1">#4CAF50</color>
+    <color name="exposition_level_2">#8BC34A</color>
+    <color name="exposition_level_3">#CDDC39</color>
+    <color name="exposition_level_4">#FFEB3B</color>
+    <color name="exposition_level_5">#FFC107</color>
+    <color name="exposition_level_6">#FF9800</color>
+    <color name="exposition_level_7">#FF5722</color>
+    <color name="exposition_level_8">#F44336</color>
+
+    <color name="exposition_level_1_bg">#334CAF50</color>
+    <color name="exposition_level_2_bg">#338BC34A</color>
+    <color name="exposition_level_3_bg">#33CDDC39</color>
+    <color name="exposition_level_4_bg">#33FFEB3B</color>
+    <color name="exposition_level_5_bg">#33FFC107</color>
+    <color name="exposition_level_6_bg">#33FF9800</color>
+    <color name="exposition_level_7_bg">#33FF5722</color>
+    <color name="exposition_level_8_bg">#33F44336</color>
+</resources>
