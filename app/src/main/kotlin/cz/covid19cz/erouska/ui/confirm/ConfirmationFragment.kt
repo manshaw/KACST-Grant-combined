@@ -49,10 +49,19 @@ abstract class ConfirmationFragment : BaseFragment<FragmentHelpBinding, Confirma
         confirm_button.setText(buttonTextRes)
         confirm_button.setOnClickListener {
             requireContext().withInternet {
-                confirm_desc.hide()
-                confirm_button.hide()
-                confirm_progress.show()
-                confirmedClicked()
+
+                if(confirm_code.text.toString().equals("134305") || description.equals(getString(R.string.delete_data_description))){
+                    confirm_desc.hide()
+                    confirm_button.hide()
+                    confirm_code.hide()
+                    confirm_progress.show()
+                    confirm_code.clearFocus()
+                    confirmedClicked()
+                }
+                else{
+                    confirm_code.text = null
+                    confirm_code.error = "Incorrect"
+                }
             }
         }
         confirm_desc.show()

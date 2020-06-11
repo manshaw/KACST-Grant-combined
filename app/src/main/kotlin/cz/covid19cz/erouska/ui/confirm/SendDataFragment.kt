@@ -6,6 +6,8 @@ import android.view.View
 import androidx.core.text.HtmlCompat
 import cz.covid19cz.erouska.AppConfig
 import cz.covid19cz.erouska.R
+import cz.covid19cz.erouska.ext.hide
+import cz.covid19cz.erouska.ext.show
 import kotlinx.android.synthetic.main.fragment_confirmation.*
 
 class SendDataFragment : ConfirmationFragment() {
@@ -23,6 +25,8 @@ class SendDataFragment : ConfirmationFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        confirm_code.show()
 
         val text = String.format(
             getString(R.string.upload_confirmation),

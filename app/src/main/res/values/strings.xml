@@ -86,7 +86,7 @@
     <string name="send_data">Send data</string>
     <string name="data_sent">Sent</string>
     <string name="please_wait_upload">Data was already sent. You can send it again in %d minutes.</string>
-    <string name="upload_confirmation"><![CDATA[Were you asked by a public health officer to send a list of phones that you were in contact with?<br/><br/>The Ministry of Health and their public health officers will use the data based on your consent in <a href="%s">conditions of data processing</a>.]]></string>
+    <string name="upload_confirmation"><![CDATA[Were you asked by a public health officer to send a list of phones that you were in contact with?<br/><br/>Enter the 6-digit test report code given to you by the health authorities in the box below.]]></string>
     <string name="share_app_title">Share application Proxim</string>
     <string name="menu_share_app">Share application</string>
     <string name="share_app_text">Hi, I\'m using application Proxim. Install it too and together we can help stop the spread of coronavirus. The application collects anonymous data about nearby phones so that the public health officers can find potentially positive people more easily. The more we are, the better it works. Application can be found at %s.</string>
