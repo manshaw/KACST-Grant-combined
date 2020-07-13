@@ -51,7 +51,7 @@ class ConfirmationVM(
                     val data = hashMapOf(
                         "buid" to prefs.getDeviceBuid()
                     )
-                    functions.getHttpsCallable("deleteUploads").call(data).await()
+//                    functions.getHttpsCallable("deleteUploads").call(data).await()
                     database.clear()
                     publish(FinishedEvent)
                 } catch (e: Exception) {

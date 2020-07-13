@@ -89,7 +89,7 @@ fun Context.withInternet(onlineAction: () -> Unit) {
 }
 
 fun Context.shareApp() {
-    val text = getString(R.string.share_app_text, AppConfig.shareAppDynamicLink)
+    val text = getString(R.string.share_app_text, "https://uqu.edu.sa/en")
     val intent = Intent(Intent.ACTION_SEND)
     intent.type = "text/plain"
     intent.putExtra(Intent.EXTRA_TEXT, text)

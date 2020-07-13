@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.tbruyelle.rxpermissions2.RxPermissions
+import cz.covid19cz.erouska.AppConfig
 import cz.covid19cz.erouska.R
 import cz.covid19cz.erouska.databinding.FragmentPermissionssDisabledBinding
 import cz.covid19cz.erouska.ext.hasLocationPermission
@@ -24,7 +25,6 @@ import cz.covid19cz.erouska.ui.dashboard.event.DashboardCommandEvent
 import cz.covid19cz.erouska.utils.Auth
 import cz.covid19cz.erouska.utils.L
 import cz.covid19cz.erouska.utils.logoutWhenNotSignedIn
-import cz.covid19cz.erouska.utils.toText
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 import org.koin.android.ext.android.inject
@@ -59,6 +59,7 @@ class DashboardFragment : BaseFragment<FragmentPermissionssDisabledBinding, Dash
         viewModel.init()
         checkIfServiceIsRunning()
         checkIfSignedIn()
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -139,8 +140,27 @@ class DashboardFragment : BaseFragment<FragmentPermissionssDisabledBinding, Dash
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        scroll.post {
+            if (scroll != null) {
+                scroll.fullScroll(View.FOCUS_DOWN)
+            }
+        }
         enableUpInToolbar(false)
         updateSecondaryText()
+        debug_txPower.selectItemByIndex(AppConfig.advertiseTxPower)
+        debug_txPower.setOnSpinnerItemSelectedListener<String> { index, _ ->
+            AppConfig.advertiseTxPower = index
+        }
+
+        debug_txMode.selectItemByIndex(AppConfig.advertiseMode)
+        debug_txMode.setOnSpinnerItemSelectedListener<String> { index, _ ->
+            AppConfig.advertiseMode = index
+        }
+
+        debug_RxMode.selectItemByIndex(AppConfig.scanMode)
+        debug_RxMode.setOnSpinnerItemSelectedListener<String> { index, _ ->
+            AppConfig.scanMode = index
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -176,6 +196,7 @@ class DashboardFragment : BaseFragment<FragmentPermissionssDisabledBinding, Dash
         requireContext().run {
             startService(CovidService.resume(this))
         }
+
     }
 
     private fun updateSecondaryText() {

@@ -36,7 +36,7 @@ class ContactsFragment : BaseFragment<FragmentPermissionssDisabledBinding, Conta
 
         val contactsHelpDescription: String = String.format(
             getString(R.string.contacts_help_desc),
-            viewModel.getEmergencyNumber()
+            "937"
         )
         contacts_help.text = HtmlCompat.fromHtml(contactsHelpDescription, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
@@ -44,11 +44,11 @@ class ContactsFragment : BaseFragment<FragmentPermissionssDisabledBinding, Conta
     }
 
     private fun openImportant() {
-        showWeb(viewModel.getImportantUrl(), customTabHelper)
+        showWeb("https://www.moh.gov.sa/en/HealthAwareness/EducationalContent/PublicHealth/Pages/corona.aspx", customTabHelper)
     }
 
     private fun openFaq() {
-        showWeb(viewModel.getFaqUrl(), customTabHelper)
+        showWeb("https://www.moh.gov.sa/en/HealthAwareness/EducationalContent/PublicHealth/Pages/corona.aspx", customTabHelper)
     }
 
     private fun openChatBot() {

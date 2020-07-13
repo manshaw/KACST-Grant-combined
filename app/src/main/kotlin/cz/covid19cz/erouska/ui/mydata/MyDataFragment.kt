@@ -33,10 +33,10 @@ class MyDataFragment :
         enableUpInToolbar(false)
         setupTabs()
 
-        data_collection_info.setOnClickListener {
-            navigate(MyDataFragmentDirections.actionNavMyDataToNavHelp(DATA_COLLECTION, false))
-        }
-        my_data_info.text = AppConfig.myDataText
+//        data_collection_info.setOnClickListener {
+//            navigate(MyDataFragmentDirections.actionNavMyDataToNavHelp(DATA_COLLECTION, false))
+//        }
+//        my_data_info.text = AppConfig.myDataText
     }
 
     private fun setupTabs(){

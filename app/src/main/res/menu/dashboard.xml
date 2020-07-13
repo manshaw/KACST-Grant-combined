@@ -7,13 +7,13 @@
         android:title="@string/menu_share_app"
         app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/nav_delete_user"
-        android:title="@string/delete_registration"
-        app:showAsAction="never" />
+<!--    <item-->
+<!--        android:id="@+id/nav_delete_user"-->
+<!--        android:title="@string/delete_registration"-->
+<!--        app:showAsAction="never" />-->
 
-    <item
-        android:id="@+id/nav_about"
-        android:title="@string/about"
-        app:showAsAction="never" />
+<!--    <item-->
+<!--        android:id="@+id/nav_about"-->
+<!--        android:title="@string/about"-->
+<!--        app:showAsAction="never" />-->
 </menu>

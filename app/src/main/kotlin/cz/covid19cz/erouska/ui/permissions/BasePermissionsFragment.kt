@@ -1,6 +1,10 @@
 package cz.covid19cz.erouska.ui.permissions
 
 import android.os.Bundle
+import android.text.Html
+import android.text.SpannableString
+import android.text.method.LinkMovementMethod
+import android.text.util.Linkify
 import android.widget.TextView
 import androidx.annotation.LayoutRes
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -13,6 +17,7 @@ import cz.covid19cz.erouska.ext.openPermissionsScreen
 import cz.covid19cz.erouska.ui.base.BaseFragment
 import cz.covid19cz.erouska.ui.permissions.onboarding.event.PermissionsOnboarding
 import io.reactivex.disposables.CompositeDisposable
+import kotlinx.android.synthetic.*
 import kotlin.reflect.KClass
 
 
@@ -70,10 +75,11 @@ open class BasePermissionsFragment<T : BasePermissionsVM>(@LayoutRes layout: Int
         layout.findViewById<TextView>(R.id.alert_title)?.let {
             it.text = getString(R.string.permission_rationale_title)
         }
-
-        MaterialAlertDialogBuilder(context)
+        val s = SpannableString(getString(R.string.permission_rationale_body)); // msg should have url to enable clicking
+        Linkify.addLinks(s, Linkify.ALL);
+        val dialogBuilder = MaterialAlertDialogBuilder(context)
             .setCustomTitle(layout)
-            .setMessage(getString(R.string.permission_rationale_body))
+            .setMessage(s)
             .setPositiveButton(getString(R.string.permission_rationale_settings))
             { dialog, _ ->
                 dialog.dismiss()
@@ -81,7 +87,9 @@ open class BasePermissionsFragment<T : BasePermissionsVM>(@LayoutRes layout: Int
             }
             .setNegativeButton(getString(R.string.permission_rationale_dismiss))
             { dialog, _ -> dialog.dismiss() }
-            .show()
+            .create()
+        dialogBuilder.show()
+        dialogBuilder.findViewById<TextView>(android.R.id.message)?.movementMethod = LinkMovementMethod.getInstance()
     }
 
     private fun enableLocation() {

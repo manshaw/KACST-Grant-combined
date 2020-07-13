@@ -15,12 +15,12 @@ object AppConfig {
         get() = firebaseRemoteConfig.getLong("collectionSeconds")
     val waitingSeconds
         get() = firebaseRemoteConfig.getLong("waitingSeconds")
-    val advertiseTxPower
-        get() = overrideAdvertiseTxPower ?: firebaseRemoteConfig.getLong("advertiseTxPower").toInt()
-    val advertiseMode
-        get() = firebaseRemoteConfig.getLong("advertiseMode").toInt()
-    val scanMode
-        get() = firebaseRemoteConfig.getLong("scanMode").toInt()
+    var advertiseTxPower = 3;
+//        get() = overrideAdvertiseTxPower ?: firebaseRemoteConfig.getLong("advertiseTxPower").toInt()
+    var advertiseMode = 1;
+//        get() = firebaseRemoteConfig.getLong("advertiseMode").toInt()
+    var scanMode = 1;
+//        get() = firebaseRemoteConfig.getLong("scanMode").toInt()
     val smsTimeoutSeconds
         get() = firebaseRemoteConfig.getLong("smsTimeoutSeconds")
     val showVerifyLaterTimeoutSeconds

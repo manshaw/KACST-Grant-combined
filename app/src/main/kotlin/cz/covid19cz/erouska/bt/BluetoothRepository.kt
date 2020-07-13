@@ -1,10 +1,8 @@
 package cz.covid19cz.erouska.bt
 
 import android.bluetooth.*
-import android.bluetooth.le.AdvertiseCallback
+import android.bluetooth.le.*
 import android.bluetooth.le.AdvertiseCallback.*
-import android.bluetooth.le.AdvertiseData
-import android.bluetooth.le.AdvertiseSettings
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.ParcelUuid
@@ -21,8 +19,13 @@ import cz.covid19cz.erouska.utils.L
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
 import no.nordicsemi.android.support.v18.scanner.*
+import no.nordicsemi.android.support.v18.scanner.ScanCallback
 import no.nordicsemi.android.support.v18.scanner.ScanSettings.MATCH_MODE_AGGRESSIVE
 import no.nordicsemi.android.support.v18.scanner.ScanCallback.*
+import no.nordicsemi.android.support.v18.scanner.ScanFilter
+import no.nordicsemi.android.support.v18.scanner.ScanRecord
+import no.nordicsemi.android.support.v18.scanner.ScanResult
+import no.nordicsemi.android.support.v18.scanner.ScanSettings
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -144,6 +147,7 @@ class BluetoothRepository(
         val androidScannerSettings: ScanSettings = ScanSettings.Builder()
             .setLegacy(false)
             .setScanMode(AppConfig.scanMode)
+
             .setMatchMode(MATCH_MODE_AGGRESSIVE)
             .build()
 
@@ -207,9 +211,12 @@ class BluetoothRepository(
                 val deviceId = scanRecord.bytes?.let {
                     getTuidFromAdvertising(scanRecord)
                 }
+                scanRecord.txPowerLevel
+                result.txPower
+                result.rssi
                 if (deviceId != null) {
                     // It's time to handle Android Device
-                    handleAndroidDevice(result, deviceId)
+                    handleAndroidDevice(result, deviceId, scanRecord.txPowerLevel.toDouble())
                 } else {
                     // It's time to handle iOS Device
                     handleIosDevice(result)
@@ -237,7 +244,7 @@ class BluetoothRepository(
         } ?: false
     }
 
-    private fun handleAndroidDevice(result: ScanResult, deviceId: String) {
+    private fun handleAndroidDevice(result: ScanResult, deviceId: String, txPower: Double) {
         if (!scanResultsMap.containsKey(deviceId)) {
             val newEntity = ObservableScanSession(deviceId, result.device.address)
             newEntity.addRssi(result.rssi, result.absoluteTimestampMillis())
@@ -245,13 +252,22 @@ class BluetoothRepository(
             scanResultsMap[deviceId] = newEntity
             L.d("Found new Android device: $deviceId")
         }
-
+        calculateDistance(txPower,result.rssi.toDouble())
         scanResultsMap[deviceId]?.let { entity ->
             entity.addRssi(result.rssi, result.absoluteTimestampMillis())
             L.d("Device (Android) $deviceId - RSSI ${result.rssi}")
         }
     }
 
+    fun calculateDistance(txPower: Double, rssi: Double): Double {
+        val ratio = rssi / txPower
+        if (rssi == 0.0) { // Cannot determine accuracy, return -1.
+            return -1.0
+        } else if (ratio < 1.0) { //default ratio
+            return Math.pow(ratio, 10.0)
+        }//rssi is greater than transmission strength
+        return (0.89976) * Math.pow(ratio, 7.7095) + 0.111
+    }
     private fun handleIosDevice(result: ScanResult) {
         if (!discoveredIosDevices.containsKey(result.device.address)) {
             L.d("Found new iOS: Mac: ${result.device.address}")
@@ -363,7 +379,7 @@ class BluetoothRepository(
 
     fun startAdvertising(tuid: String) {
         val power = AppConfig.advertiseTxPower
-
+//        AppConfig.advertiseTxPower = 3;
         stopAdvertising()
 
         if (!isBtEnabled()) {
@@ -382,12 +398,13 @@ class BluetoothRepository(
 
         val parcelUuid = ParcelUuid(SERVICE_UUID)
         val data = AdvertiseData.Builder()
-            .setIncludeDeviceName(false)
+            .setIncludeDeviceName(true)
             .addServiceUuid(parcelUuid)
             .build()
 
         val scanData = AdvertiseData.Builder()
             .setIncludeDeviceName(false)
+            .setIncludeTxPowerLevel(true)
             .addServiceData(parcelUuid, tuid.hexAsByteArray).build()
 
         btManager.adapter?.bluetoothLeAdvertiser?.startAdvertising(

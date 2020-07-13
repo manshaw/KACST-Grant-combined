@@ -303,8 +303,8 @@ class CovidService : Service() {
                     bleScanningDisposable?.dispose()
                 }
             }
-            .delay(AppConfig.collectionSeconds, TimeUnit.SECONDS)
-            .throttleFirst(AppConfig.collectionSeconds, TimeUnit.SECONDS)
+            .delay(10, TimeUnit.SECONDS)
+            .throttleFirst(10, TimeUnit.SECONDS)
             .doOnNext {
                 btUtils.stopScanning()
             }

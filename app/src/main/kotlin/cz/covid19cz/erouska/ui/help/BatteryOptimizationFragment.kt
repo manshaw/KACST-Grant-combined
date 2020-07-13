@@ -33,14 +33,14 @@ class BatteryOptimizationFragment :
                     ).build()
             )
         }
-        binding.guideBtn.text = getString(R.string.guide_for, deviceInfo.getManufacturer())
-        binding.guideBtn.setOnClickListener {
-            if (navController().currentDestination?.id == R.id.nav_battery_optimization) {
-                navigate(R.id.action_nav_battery_optimization_to_nav_guide, Bundle().apply {
-                    putBoolean("fullscreen", true)
-                })
-            }
-        }
+//        binding.guideBtn.text = getString(R.string.guide_for, deviceInfo.getManufacturer())
+//        binding.guideBtn.setOnClickListener {
+//            if (navController().currentDestination?.id == R.id.nav_battery_optimization) {
+//                navigate(R.id.action_nav_battery_optimization_to_nav_guide, Bundle().apply {
+//                    putBoolean("fullscreen", true)
+//                })
+//            }
+//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

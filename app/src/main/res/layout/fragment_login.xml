@@ -186,7 +186,7 @@
                     android:inputType="phone"
                     android:lines="1"
                     android:maxLength="20"
-                    android:text="+420" />
+                    android:text="+966" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
