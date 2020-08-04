@@ -117,8 +117,8 @@ Contains constants which we can changed later without updating the app.
     1.	Web app fetches a FUID related to the phone number. 
     1.	A blob is loaded for the particular FUID from the Firebase Storage. 
     1.	After the raw data is analysed, the TUIDs of people the person met are loaded from the blob, with: 
-        1.	their respective phone numbers from the collection users 
-        1.	a flag representing whether the person met was in close contact or not 
-        1.	their respective device names 
+        1. their respective phone numbers from the collection users 
+        1. a flag representing whether the person met was in close contact or not 
+        1. their respective device names 
     1.	Epidemiologist contacts the possibly newly infected. 
  
