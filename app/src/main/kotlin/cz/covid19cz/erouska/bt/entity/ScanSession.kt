@@ -8,7 +8,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-open class ScanSession(tuid: String = UNKNOWN_TUID, val mac: String) {
+open class ScanSession(tuid: String = UNKNOWN_TUID, val mac: String, var txPower: Int = 0, var distance: Double = 0.0) {
 
     companion object{
         const val UNKNOWN_TUID = "UNKNOWN"
@@ -36,7 +36,7 @@ open class ScanSession(tuid: String = UNKNOWN_TUID, val mac: String) {
         fun MutableList<ScanSession>.getValidScanSession(rssi: Rssi): ScanSession {
             return lastOrNull()?.takeIf {
                 rssi.timestamp - it.timestampStart < interval
-            } ?: ScanSession(deviceId, mac).apply {
+            } ?: ScanSession(deviceId, mac, txPower, distance).apply {
                 this@getValidScanSession.add(this)
             }
         }

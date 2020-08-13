@@ -69,12 +69,35 @@
             android:gravity="center"
             android:text='@{String.format("%d dBm",item.rssiMed)}'
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textTxPower"
             app:layout_constraintStart_toEndOf="@id/textTuid"
             app:layout_constraintTop_toTopOf="parent"
             app:textColorResource="@{ColorUtils.INSTANCE.rssiToColor(item.rssiMed)}"
             tools:text="-70 db" />
 
+        <TextView
+            android:id="@+id/textTxPower"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text='@{String.format("%d dBm",item.txPower)}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textDistance"
+            app:layout_constraintStart_toEndOf="@id/textRssi"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+1 db" />
+
+        <TextView
+            android:id="@+id/textDistance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text='@{String.format("%.2f m",item.distance)}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textTxPower"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2.2" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

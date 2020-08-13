@@ -19,7 +19,9 @@ class CsvExporter(private val repository: DatabaseRepository) {
             "timestampStart",
             "timestampEnd",
             "avgRssi",
-            "medRssi"
+            "medRssi",
+            "txpower",
+            "distance"
         )
     }
 
@@ -44,7 +46,10 @@ class CsvExporter(private val repository: DatabaseRepository) {
                             entity.timestampStart,
                             entity.timestampEnd,
                             entity.rssiAvg,
-                            entity.rssiMed
+                            entity.rssiMed,
+                            entity.txPower,
+                            entity.distance
+
                         )
                     }
                 }

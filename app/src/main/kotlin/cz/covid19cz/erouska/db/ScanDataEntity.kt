@@ -21,7 +21,11 @@ data class ScanDataEntity(
     @ColumnInfo(name = COLUMN_RSSI_MED)
     val rssiMed: Int,
     @ColumnInfo(name = COLUMN_RSSI_COUNT)
-    val rssiCount: Int
+    val rssiCount: Int,
+    @ColumnInfo(name = COLUMN_TX_POWER)
+    val txPower: Int,
+    @ColumnInfo(name = COLUMN_DISTANCE)
+    val distance: Double
 ){
     companion object {
         const val COLUMN_ID = "id"
@@ -31,6 +35,8 @@ data class ScanDataEntity(
         const val COLUMN_RSSI_AVG = "rssiAvg"
         const val COLUMN_RSSI_MED = "rssiMed"
         const val COLUMN_RSSI_COUNT = "rssiCount"
+        const val COLUMN_TX_POWER = "txpower"
+        const val COLUMN_DISTANCE = "distance"
     }
 
     fun getMaskedTuid() : String{

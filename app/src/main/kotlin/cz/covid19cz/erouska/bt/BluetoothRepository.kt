@@ -41,6 +41,8 @@ class BluetoothRepository(
         val SERVICE_UUID: UUID = UUID.fromString("1440dd68-67e4-11ea-bc55-0242ac130003")
         val GATT_CHARACTERISTIC_UUID: UUID = UUID.fromString("9472fbde-04ff-4fff-be1c-b9d3287e8f28")
         const val APPLE_MANUFACTURER_ID = 76
+        const val SIGNAL_LOSS_1M = 40
+        const val ENVIRONMENTAL_FACTOR = 4
     }
 
     private val scanResultsMap = HashMap<String, ScanSession>()
@@ -193,7 +195,9 @@ class BluetoothRepository(
                         session.timestampEnd,
                         session.avgRssi,
                         session.medRssi,
-                        session.rssiCount
+                        session.rssiCount,
+                        session.txPower,
+                        session.distance
                     )
                     L.d("Saving: $scanResult")
                     db.add(scanResult)
@@ -211,12 +215,10 @@ class BluetoothRepository(
                 val deviceId = scanRecord.bytes?.let {
                     getTuidFromAdvertising(scanRecord)
                 }
-                scanRecord.txPowerLevel
-                result.txPower
-                result.rssi
+
                 if (deviceId != null) {
                     // It's time to handle Android Device
-                    handleAndroidDevice(result, deviceId, scanRecord.txPowerLevel.toDouble())
+                    handleAndroidDevice(result, deviceId, scanRecord.txPowerLevel, calculateDistance(scanRecord.txPowerLevel, result.rssi.toDouble()))
                 } else {
                     // It's time to handle iOS Device
                     handleIosDevice(result)
@@ -244,29 +246,28 @@ class BluetoothRepository(
         } ?: false
     }
 
-    private fun handleAndroidDevice(result: ScanResult, deviceId: String, txPower: Double) {
+    private fun handleAndroidDevice(result: ScanResult, deviceId: String, txPower: Int, distance : Double) {
         if (!scanResultsMap.containsKey(deviceId)) {
             val newEntity = ObservableScanSession(deviceId, result.device.address)
             newEntity.addRssi(result.rssi, result.absoluteTimestampMillis())
+            newEntity.txPower = txPower
+            newEntity.distance = distance
             scanResultsList.add(newEntity)
             scanResultsMap[deviceId] = newEntity
             L.d("Found new Android device: $deviceId")
         }
+
         calculateDistance(txPower,result.rssi.toDouble())
         scanResultsMap[deviceId]?.let { entity ->
             entity.addRssi(result.rssi, result.absoluteTimestampMillis())
+            entity.txPower = txPower
+            entity.distance = distance
             L.d("Device (Android) $deviceId - RSSI ${result.rssi}")
         }
     }
 
-    fun calculateDistance(txPower: Double, rssi: Double): Double {
-        val ratio = rssi / txPower
-        if (rssi == 0.0) { // Cannot determine accuracy, return -1.
-            return -1.0
-        } else if (ratio < 1.0) { //default ratio
-            return Math.pow(ratio, 10.0)
-        }//rssi is greater than transmission strength
-        return (0.89976) * Math.pow(ratio, 7.7095) + 0.111
+    fun calculateDistance(txPower: Int, rssi: Double): Double {
+        return Math.pow(10.0, (txPower - SIGNAL_LOSS_1M - rssi) / (10 * ENVIRONMENTAL_FACTOR))
     }
     private fun handleIosDevice(result: ScanResult) {
         if (!discoveredIosDevices.containsKey(result.device.address)) {
@@ -398,12 +399,10 @@ class BluetoothRepository(
 
         val parcelUuid = ParcelUuid(SERVICE_UUID)
         val data = AdvertiseData.Builder()
-            .setIncludeDeviceName(true)
             .addServiceUuid(parcelUuid)
             .build()
 
         val scanData = AdvertiseData.Builder()
-            .setIncludeDeviceName(false)
             .setIncludeTxPowerLevel(true)
             .addServiceData(parcelUuid, tuid.hexAsByteArray).build()
 
