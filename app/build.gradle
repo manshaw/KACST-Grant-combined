@@ -9,6 +9,8 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
+    useLibrary 'org.apache.http.legacy'
+
     defaultConfig {
         applicationId "pk.covid19sa.proxim"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -121,6 +123,7 @@ dependencies {
     implementation "com.google.android.material:material:$versions.material"
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation "androidx.browser:browser:1.2.0"
+    implementation 'com.android.support:cardview-v7:28.0.0'
 
     // Arch
     implementation project(':arch')
@@ -157,6 +160,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-functions-ktx:19.0.2'
     implementation 'com.google.firebase:firebase-storage-ktx:19.1.1'
     implementation 'com.google.firebase:firebase-messaging:20.1.3'
+    implementation 'com.google.firebase:firebase-database:19.3.1'
+
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.4+'
 
     // Room
     implementation "androidx.room:room-runtime:$versions.room"
@@ -174,6 +182,11 @@ dependencies {
     implementation 'com.jaredrummler:android-device-names:2.0.0'
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.3'
     implementation "com.github.skydoves:powerspinner:1.0.9"
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    implementation 'com.weiwangcn.betterspinner:library:1.1.0'
     implementation ('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
         // Exclude is only needed if you already have
         // androidx.appcompat as a dependency in your app.

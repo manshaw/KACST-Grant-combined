@@ -142,4 +142,503 @@
     <string name="data_content_info">Here is the history of contacts with other users of Proxim. It doesn\'t indicate infection of the users.</string>
     <string name="help_write_chabot">Chat with Anežka – Proxim support</string>
     <string name="contacts_open_chatbot">Anežka – Proxim support</string>
+
+    // DISCLAIMER START
+    <string name="disclaimer_title">Disclaimer</string>
+    <string name="disclaimer_text">This software provides only forecasts of occupancy of selected places. The actual occupancy and occurence of people at places may differ from these forecasts as they are based on past statistical data. The authors provide no guarantee in any way to the accuracy of these forecasts. This software does not provide or substitute in any way medical or health advice or consultation.</string>
+    <string name="disclaimer_checkbox_text">I read and understand.</string>
+    <string name="disclaimer_button_tooltip">Confirm by checking the box</string>
+    <string name="disclaimer_button_text">Start</string>
+    // DISCLAIMER END
+    ​
+    // ONBOARDING SLIDE 1 START
+    <string name="slide1_title">Welcome</string>
+    <string name="slide1_text">We are happy to have you onboard. Let\'s start.</string>
+    <string name="slide1_button_text">How does it work?</string>
+    // ONBOARDING SLIDE 1 END
+    ​
+    // ONBOARDING SLIDE 2 START
+    <string name="slide2_title">Plan your day</string>
+    <string name="slide2_text">Based on the data we can predict where and when it\'s more convenient to go.</string>
+    <string name="slide2_button_text">What\'s next?</string>
+    // ONBOARDING SLIDE 2 END
+    ​
+    // ONBOARDING SLIDE 3 START
+    <string name="slide3_title">Avoid the crowds</string>
+    <string name="slide3_text">Create a list of your favourite places and go there without worries.</string>
+    <string name="slide3_button_text">Shall I start?</string>
+    // ONBOARDING SLIDE 3 END
+    ​
+    // ONBOARDING SLIDE 4 START
+    <string name="slide4_title">Create your own list</string>
+    <string name="slide4_text">The list is empty and it awaits your first favourite place.</string>
+    <string name="slide4_button_text">Add my first place</string>
+    // ONBOARDING SLIDE 4 END
+    ​
+    // SELECT CATEGORY START
+    <string name="category_page_title">Where to</string>
+    <string name="category_page_text">Choose one of the supported categories:</string>
+    <string name="category_item_1">Pharmacy</string>
+    <string name="category_item_2">Grocery</string>
+    <string name="category_item_3">Park</string>
+    // SELECT CATEGORY END
+    ​
+    // SELECT PLACE START
+    <string name="select_place_search_hint">Search</string>
+    <string name="search_results">nearby</string>
+    <string name="Add_button">Add</string>
+    <string name="dialog_box_text">This location is already in your list of favorite places. Do you want to proceed to the list?</string>
+    <string name="dialog_button_1">Yes</string>
+    <string name="dialog_button_2">No</string>
+    // SELECT PLACE END
+    ​
+    // FAVOURITE PLACES START
+    <string name="favourite_places_title">Plan your day</string>
+    <string name="favourite_places_subtitle">RECOMMENDED TIME</string>
+    <string name="favourite_places_button_text">Find different place</string>
+    <string name="favourite_places_status_1">No data</string>
+    <string name="favourite_places_status_2">Not today</string>
+    // FAVOURITE PLACES END
+    ​
+    // GRAPH START
+    <string name="graph_title">Timings</string>
+    <string name="graph_legend_low">Low</string>
+    <string name="graph_legend_medium">Medium</string>
+    <string name="graph_legend_high">High</string>
+    <string name="graph_staus">No data found!</string>
+    <string name="graph_applink_text">Download our data gathering app and help us with our efforts.</string>
+    <string name="graph_download_button_text">Download</string>
+    <string name="graph_day1">Today</string>
+    <string name="graph_day2">Tomorrow</string>
+    <string name="Rem_button">Remove</string>
+    ​
+    // GRAPH END
+    ​
+    // CUSTOM NAME START
+    <string name="custom_name_place_address">Place address</string>
+    <string name="custom_name_place_new_name">You can name your place (optional)</string>
+    <string name="custom_name_button_text">Add to favourite places</string>
+    // CUSTOM NAME END
+    ​
+    ​
+    // CZ LANG STARTS
+    ​
+    ​
+    // DISCLAIMER START
+    <string name="disclaimer_title_cz">Vyloučení odpovědnosti</string>
+    <string name="disclaimer_text_cz">Tento software poskytuje pouze předpovědi obsazenosti vybraných míst. Skutečná obsazenost a výskyt lidí na místech se může od těchto předpovědí lišit, neboť vychází z dřívějších statistických dat. Tento software žádným způsobem neposkytuje a ani nenahrazuje lékařskou ani zdravotní radu nebo konzultaci.</string>
+    <string name="disclaimer_checkbox_text_cz">Četl jsem a rozumím.</string>
+    <string name="disclaimer_button_tooltip_cz">Zaškrtnutím potvrďte souhlas</string>
+    <string name="disclaimer_button_text_cz">Start</string>
+    // DISCLAIMER END
+    ​
+    // ONBOARDING SLIDE 1 START
+    <string name="slide1_title_cz">Vítejte</string>
+    <string name="slide1_text_cz">Jsme rádi, že jste s námi. Pusťme se do toho.</string>
+    <string name="slide1_button_text_cz">Jak to funguje?</string>
+    // ONBOARDING SLIDE 1 END
+    ​
+    // ONBOARDING SLIDE 2 START
+    <string name="slide2_title_cz">Plánujte si den</string>
+    <string name="slide2_text_cz">Na základě získaných dat můžeme předpovídat, kdy je vhodnější se na daná místa vydat.</string>
+    <string name="slide2_button_text_cz">Co dál?</string>
+    // ONBOARDING SLIDE 2 END
+
+    // ONBOARDING SLIDE 3 START
+    <string name="slide3_title_cz">Navštěvujte místa v klidu</string>
+    <string name="slide3_text_cz">Vytvořte si seznam svých oblíbených míst a vyhněte se davům.</string>
+    <string name="slide3_button_text_cz">Už můžu začít?</string>
+    // ONBOARDING SLIDE 3 END
+
+    // ONBOARDING SLIDE 4 START
+    <string name="slide4_title_cz">Vytvořte si vlastní seznam</string>
+    <string name="slide4_text_cz">Váš seznam oblíbených míst je zatím prázdný, přidejte první lokalitu.</string>
+    <string name="slide4_button_text_cz">Přidat první místo</string>
+    // ONBOARDING SLIDE 4 END
+
+    // PLAN YOUR DAY START
+    <!--    <string name="title">Začínáme</string>-->
+    <!--    // <string name="text">Váš seznam je prázdný. Přidejte si své první místo.</string>-->
+    <!--    // <string name="button_text">Přidejte první místo</string>-->
+    // PLAN YOUR DAY END
+    ​
+    // SELECT CATEGORY START
+    <string name="category_page_title_cz">Kam jít</string>
+    <string name="category_page_text_cz">Vyberte jednu ze zatím podporovaných kategorií:</string>
+    <string name="category_item_1_cz">Lékárna</string>
+    <string name="category_item_2_cz">Potraviny</string>
+    <string name="category_item_3_cz">Park</string>
+    // SELECT CATEGORY END
+    ​
+    // SELECT PLACE START
+    <string name="select_place_search_hint_cz">Hledat</string>
+    <string name="search_results_cz">v okolí</string>
+    <string name="Add_button_cz">Přidat</string>
+    <string name="dialog_box_text_cz">Toto místo již máte v seznamu oblíbených míst. Chcete přejít k tomuto seznamu?</string>
+    <string name="dialog_button_1_cz">Ano</string>
+    <string name="dialog_button_2_cz">Ne</string>
+    // SELECT PLACE END
+    ​
+    // FAVOURITE PLACES START
+    <string name="favourite_places_title_cz">Naplánujte si den</string>
+    <string name="favourite_places_subtitle_cz">DOPORUČENÝ ČAS</string>
+    <string name="favourite_places_button_text_cz">Najít jiné místo</string>
+    <string name="favourite_places_status_1_cz">Málo dat</string>
+    <string name="favourite_places_status_2_cz">Lépe zítra</string>
+    // FAVOURITE PLACES END
+    ​
+    // GRAPH START
+    <string name="graph_title_cz">Timings</string>
+    <string name="graph_legend_low_cz">Nízká</string>
+    <string name="graph_legend_medium_cz">Střední</string>
+    <string name="graph_legend_high_cz">Vysoká</string>
+    <string name="graph_staus_cz">Data nenalezena!</string>
+    <string name="graph_applink_text_cz">Stáhněte si naši aplikaci FreMEn Explorer a pomozte nám sbírat data!</string>
+    <string name="graph_download_button_text_cz">Stáhnout</string>
+    <string name="graph_day1_cz">Dnes</string>
+    <string name="graph_day2_cz">Zítra</string>
+    <string name="graph_remove_button_cz">Odebrat</string>
+    // GRAPH END
+    ​
+    // CUSTOM NAME START
+    <string name="custom_name_place_address_cz">Adresa místa</string>
+    <string name="custom_name_place_new_name_cz">Pojmenujte si místo (volitelné)</string>
+    <string name="custom_name_button_text_cz">Přidat k oblíbeným</string>
+    // CUSTOM NAME END
+    ​
+    // AR LANG STARTS
+    ​
+    <string name="app_name_ar">Covid Combine</string>
+    ​
+    // DISCLAIMER START
+    <string name="disclaimer_title_ar">إقرار</string>
+    <string name="disclaimer_text_ar">يوفر هذا البرنامج فقط توقعات إشغال أماكن محددة. قد يختلف الإشغال الفعلي ووجود الأشخاص في الأماكن عن هذه التوقعات لأنها تستند إلى بيانات إحصائية سابقة. لا يقدم المؤلفون أي ضمان بأي شكل من الأشكال على دقة هذه التوقعات. لا يوفر هذا البرنامج أو يحل محل أي استشارة أو استشارة طبية أو صحية بأي شكل من الأشكال</string>
+    <string name="disclaimer_checkbox_text_ar">قرأت وفهمت</string>
+    <string name="disclaimer_button_tooltip_ar">قم بالموافقة عن طريق الضغط على المربع</string>
+    <string name="disclaimer_button_text_ar">البدء</string>
+    // DISCLAIMER END
+    ​
+    // ONBOARDING SLIDE 1 START
+    <string name="slide1_title_ar">مرحبا</string>
+    <string name="slide1_text_ar">يسعدنا انضمامك الينا .ابدأ</string>
+    <string name="slide1_button_text_ar">كيف يعمل؟</string>
+    // ONBOARDING SLIDE 1 END
+    ​
+    // ONBOARDING SLIDE 2 START
+    <string name="slide2_title_ar">خطط يومك</string>
+    <string name="slide2_text_ar">استناداً الى البيانات يمكننا توقع اين ومتى يكون المكان اكثر ملاءمةً للذهاب</string>
+    <string name="slide2_button_text_ar">ماذا بعد ذلك؟</string>
+    // ONBOARDING SLIDE 2 END
+
+    // ONBOARDING SLIDE 3 START
+    <string name="slide3_title_ar">تجنب الازدحام</string>
+    <string name="slide3_text_ar">قم بإنشاء قائمة بأماكنك المفضلة ثم اذهب اليها من غير قلق</string>
+    <string name="slide3_button_text_ar">هل ابدأ؟</string>
+    // ONBOARDING SLIDE 3 END
+
+    // ONBOARDING SLIDE 4 START
+    <string name="slide4_title_ar">أنشئ قائمتك</string>
+    <string name="slide4_text_ar">القائمة فارغة تنتظر مكانك المفضل الأول</string>
+    <string name="slide4_button_text_ar">اضف مكاني المفضل الأول</string>
+    // ONBOARDING SLIDE 4 END
+
+    // PLAN YOUR DAY START
+    <!--    <string name="title">Začínáme</string>-->
+    <!--    // <string name="text">Váš seznam je prázdný. Přidejte si své první místo.</string>-->
+    <!--    // <string name="button_text">Přidejte první místo</string>-->
+    // PLAN YOUR DAY END
+    ​
+    // SELECT CATEGORY START
+    <string name="category_page_title_ar">الى اين</string>
+    <string name="category_page_text_ar">اختر احدى الفئات المدعومة:</string>
+    <string name="category_item_1_ar">صيدلية</string>
+    <string name="category_item_2_ar">بقالة</string>
+    <string name="category_item_3_ar">حديقة</string>
+    // SELECT CATEGORY END
+    ​
+    // SELECT PLACE START
+    <string name="select_place_search_hint_ar">ابحث</string>
+    <string name="search_results_ar">قريب</string>
+    <string name="Add_button_ar">اضافة</string>
+    <string name="dialog_box_text_ar">هذا الموقع موجود بالفعل في قائمة الأماكن المفضلة لديك. هل تريد المتابعة إلى القائمة؟</string>
+    <string name="dialog_button_1_ar">نعم</string>
+    <string name="dialog_button_2_ar">لا</string>
+    // SELECT PLACE END
+    ​
+    // FAVOURITE PLACES START
+    <string name="favourite_places_title_ar">خطط يومك</string>
+    <string name="favourite_places_subtitle_ar">الوقت الموصى به</string>
+    <string name="favourite_places_button_text_ar">ابحث عن مكان مختلف</string>
+    <string name="favourite_places_status_1_ar">لايوجد بيانات</string>
+    <string name="favourite_places_status_2_ar">ليس اليوم</string>
+    // FAVOURITE PLACES END
+    ​
+    // GRAPH START
+    <string name="graph_title_ar">الأوقات</string>
+    <string name="graph_legend_low_ar">منخفض</string>
+    <string name="graph_legend_medium_ar">متوسط</string>
+    <string name="graph_legend_high_ar">مرتفع</string>
+    <string name="graph_staus_ar">لايوجد بيانات</string>
+    <string name="graph_applink_text_ar">قم بتنزيل تطبيق جمع البيانات الخاص بنا وساعدنا في عملنا</string>
+    <string name="graph_download_button_text_ar">تحميل</string>
+    <string name="graph_day1_ar">اليوم</string>
+    <string name="graph_day2_ar">غداً</string>
+    <string name="graph_remove_button_ar">حذف</string>
+    // GRAPH END
+    ​
+    // CUSTOM NAME START
+    <string name="custom_name_place_address_ar">Adresa místa</string>
+    <string name="custom_name_place_new_name_ar">Pojmenujte si místo (volitelné)</string>
+    <string name="custom_name_button_text_ar">Přidat k oblíbeným</string>
+    // CUSTOM NAME END
+
+
+    //////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////
+
+    // START ONBOARDING SCREEN 1
+    <string name="onboarding_scrren_1_title">Help us fight COVID</string>
+    <string name="onboarding_scrren_1_text1">We are developing a voice-based diagnosis which could differentiate a healthy person from an infected one by listening to his cough</string>
+    <string name="onboarding_scrren_1_text2">Your help is essential in training our algorithm. We need you to record and send us your cough audio</string>
+    <string name="onboarding_scrren_1_text3">The recording is confidential and anonymous. The process takes no more than 2 minutes of your precious time</string>
+    // END ONBOARDING SCREEN 1
+
+
+    // START ONBOARDING SCREEN 2
+    <string name="onboarding_scrren_2_title">Safe Coughing</string>
+    <string name="onboarding_scrren_2_text1">Coughing is a potentially dangerous activity, so please be very careful and protect yourself and everyone around you when you make the recordings</string>
+    <string name="onboarding_scrren_2_text2">As a strategy for safe coughing, we recommend to hold your phone at arm’s length to the right of your body, and cough into the crook of your left elbow</string>
+    // END ONBOARDING SCREEN 2
+
+
+    // START RECORD SCREEN
+    <string name="record_screen_title">STEPS</string>
+    <string name="record_screen_text1">1. Hold your phone at arms length to the right of your body and cough into the crook of your left arm elbow</string>
+    <string name="record_screen_text2">2. Press and hold start button</string>
+    <string name="record_screen_text3">3. Now cough enough to record data</string>
+    <string name="record_screen_text4">4. Release the start button to upload</string>
+    <string name="record_screen_button1">Start</string>
+    // END RECORD SCREEN
+
+
+    // START DIALOG CONSENT
+    <string name="dialog_consent_title">Are you satisfied with the recording?</string>
+    <string name="dialog_consent_button1">Play Again</string>
+    <string name="dialog_consent_button2">Yes</string>
+    <string name="dialog_consent_button3">No</string>
+    // END DIALOG CONSENT
+
+
+    // START DIALOG DISEASE
+    <string name="dialog_disease_title">Diagnosed with the following conditions? (if any)</string>
+    <string name="dialog_disease_button1">Chronic Lung Disease</string>
+    <string name="dialog_disease_button2">Diabetes</string>
+    <string name="dialog_disease_button3">Heart Disease</string>
+    <string name="dialog_disease_button4">Obesity / Adipositas</string>
+    <string name="dialog_disease_button5">CONTINUE</string>
+    // END DIALOG DISEASE
+
+
+    // START DIALOG DRY COUGH
+    <string name="dialog_drycough_title">Had a persistent dry cough in the past 24 hours?</string>
+    <string name="dialog_drycough_button1">Yes</string>
+    <string name="dialog_drycough_button2">No</string>
+    // END DIALOG DRY COUGH
+
+
+    // START DIALOG ENTER INFORMATION
+    <string name="dialog_enterinfo_title">Please Enter Information</string>
+    <string name="dialog_enterinfo_button1">Age</string>
+    <string name="dialog_enterinfo_button2">Gender</string>
+    <string name="dialog_enterinfo_button3">Next</string>
+    // END DIALOG ENTER INFORMATION
+
+
+    // START DIALOG MEDICAL CONDITION
+    <string name="dialog_medicalcondition_title">Select Your Health Status</string>
+    <string name="dialog_medicalcondition_button1">I am HEALTHY</string>
+    <string name="dialog_medicalcondition_button2">I MIGHT have COVID-19</string>
+    <string name="dialog_medicalcondition_button3">I am COVID-19 PATIENT</string>
+    <string name="dialog_medicalcondition_button4">I am COVID-19 SURVIVOUR</string>
+    // END DIALOG MEDICAL CONDITION
+
+
+    // START DIALOG SMOKE
+    <string name="dialog_smoke_title">Do You Smoke?</string>
+    <string name="dialog_smoke_button1">Yes</string>
+    <string name="dialog_smoke_button2">No</string>
+    // END DIALOG SMOKE
+
+
+    // START DIALOG SUBMIT
+    <string name="dialog_submit_title">THANK YOU</string>
+    <string name="dialog_submit_button1">Submit</string>
+    // END DIALOG SUBMIT
+
+
+    // START DIALOG SYMPTOMS
+    <string name="dialog_symptoms_title">Please tell us the symptoms (if any)</string>
+    <string name="dialog_symptoms_button1">Fever</string>
+    <string name="dialog_symptoms_button2">Feeling Tired or Weak</string>
+    <string name="dialog_symptoms_button3">Diarreah</string>
+    <string name="dialog_symptoms_button4">Headache</string>
+    <string name="dialog_symptoms_button5">Lost of Taste or Smell</string>
+    <string name="dialog_symptoms_button6">CONTINUE</string>
+    // END DIALOG SYMPTOMS
+
+
+    // START DIALOG BREATH
+    <string name="dialog_breath_title">Get out of breath easier than usually?</string>
+    <string name="dialog_breath_button1">Yes</string>
+    <string name="dialog_breath_button2">No</string>
+    // END DIALOG BREATH
+
+
+    // START DIALOG CLOSE CONTACT
+    <string name="dialog_closecontact_title">Had close contact with a confirmed COVID case?</string>
+    <string name="dialog_closecontact_text1">\u2022 Living in the same apartment</string>
+    <string name="dialog_closecontact_text2">\u2022 Direct, physical contact (touching, shaking hands, kissing, body fluids)</string>
+    <string name="dialog_closecontact_text3">\u2022 Face-to-face contact, or within 1.5 meters, for longer than 15 minutes</string>
+    <string name="dialog_closecontact_button1">Yes</string>
+    <string name="dialog_closecontact_button2">No</string>
+    // END DIALOG CLOSE CONTACT
+
+
+    // START EXTRA
+    <string name="record_screen_button_status1">Start</string>
+    <string name="record_screen_button_status2">Stopped</string>
+    <string name="record_screen_button_status3">Uploaded</string>
+    <string name="record_screen_button_status4">Uploading...</string>
+    <string name="record_screen_button_status5">Recording...</string>
+    <string name="record_screen_toast1">Press for longer duration!!!</string>
+    <string name="record_screen_toast2">Successfully Uploaded. THANK YOU.</string>
+    <string name="record_screen_toast3">Recording Started</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    // END EXTRA
+
+
+    // START ONBOARDING SCREEN 1
+    <string name="onboarding_scrren_1_title_ar">ساعدنا من أجل مكافحة جائحة كورونا</string>
+    <string name="onboarding_scrren_1_text1_ar">نقوم بتطوير تشخيص ذاتي يمكنه معرفة مصاب كوفيد١٩ من صوت السعال</string>
+    <string name="onboarding_scrren_1_text2_ar">سجيل صوتك أثناء السعال أو الكحة سوف يخدم الغرض من هذا البرنامج</string>
+    <string name="onboarding_scrren_1_text3_ar">جميع البيانات مجهولة ومحفوظة بسرية لأغراض البحث العلمي</string>
+    // END ONBOARDING SCREEN 1
+
+
+    // START ONBOARDING SCREEN 2
+    <string name="onboarding_scrren_2_title_ar">طريقة السعال الآمنة</string>
+    <string name="onboarding_scrren_2_text1_ar">نرجوا منك الإستعداد لتسجيل السعال أو الكحه الخاصة بك</string>
+    <string name="onboarding_scrren_2_text2_ar">ننصح بأن تبقي جهازك على بعد ذراع تقريباً من الجزء الأيمن للجسم</string>
+    // END ONBOARDING SCREEN 2
+
+
+    // START RECORD SCREEN
+    <string name="record_screen_title_ar">الخطوات</string>
+    <string name="record_screen_text1_ar">1. مد يدك اليمنى حاملا الهاتف للأعلى واستعد للسعال مرتين متاليتين</string>
+    <string name="record_screen_text2_ar">2. اضغط مع الإستمرار على زر التسجيل</string>
+    <string name="record_screen_text3_ar">3. الآن قم بالسعال</string>
+    <string name="record_screen_text4_ar">4. اترك زر التسجيل</string>
+    <string name="record_screen_button1_ar">ابدء الآن</string>
+    // END RECORD SCREEN
+
+
+    // START DIALOG CONSENT
+    <string name="dialog_consent_title_ar">هل أنت راض عن التسجيل؟</string>
+    <string name="dialog_consent_button1_ar">التسجيل مرة أخرى</string>
+    <string name="dialog_consent_button2_ar">نعم</string>
+    <string name="dialog_consent_button3_ar">لا</string>
+    // END DIALOG CONSENT
+
+
+    // START DIALOG DISEASE
+    <string name="dialog_disease_title_ar">هل لديك أحد الأمراض التالية؟</string>
+    <string name="dialog_disease_button1_ar">مرض تنفسي أو رئوي</string>
+    <string name="dialog_disease_button2_ar">داء السكري</string>
+    <string name="dialog_disease_button3_ar">أمراض قلب</string>
+    <string name="dialog_disease_button4_ar">سمنه مفرطة</string>
+    <string name="dialog_disease_button5_ar">الإستمرار</string>
+    // END DIALOG DISEASE
+
+
+    // START DIALOG DRY COUGH
+    <string name="dialog_drycough_title_ar">هل لديك سعال جاف خلال ال٢٤ ساعة الماضية؟</string>
+    <string name="dialog_drycough_button1_ar">نعم</string>
+    <string name="dialog_drycough_button2_ar">لا</string>
+    // END DIALOG DRY COUGH
+
+
+    // START DIALOG ENTER INFORMATION
+    <string name="dialog_enterinfo_title_ar">نأمل تعبئة البيانات التالية</string>
+    <string name="dialog_enterinfo_button1_ar">العمر</string>
+    <string name="dialog_enterinfo_button2_ar">الجنس</string>
+    <string name="dialog_enterinfo_button3_ar">القادم</string>
+    // END DIALOG ENTER INFORMATION
+
+
+    // START DIALOG MEDICAL CONDITION
+    <string name="dialog_medicalcondition_title_ar">إختر حالتك الصحية</string>
+    <string name="dialog_medicalcondition_button1_ar">حالتي الصحية جيدة</string>
+    <string name="dialog_medicalcondition_button2_ar">قد يكون لدي كوفيد١٩</string>
+    <string name="dialog_medicalcondition_button3_ar">تم تشخيصي بمرض كوفيد١٩</string>
+    <string name="dialog_medicalcondition_button4_ar">تم تشخيصي بمرض كوفيد١٩ وتعافيت منه</string>
+    // END DIALOG MEDICAL CONDITION
+
+
+    // START DIALOG SMOKE
+    <string name="dialog_smoke_title_ar">هل أنت مدخن؟</string>
+    <string name="dialog_smoke_button1_ar">نعم</string>
+    <string name="dialog_smoke_button2_ar">لا</string>
+    // END DIALOG SMOKE
+
+
+    // START DIALOG SUBMIT
+    <string name="dialog_submit_title_ar">شكراً لك</string>
+    <string name="dialog_submit_button1_ar">إرسال</string>
+    // END DIALOG SUBMIT
+
+
+    // START DIALOG SYMPTOMS
+    <string name="dialog_symptoms_title_ar">نأمل إخبارنا ببعض العوارض لديك</string>
+    <string name="dialog_symptoms_button1_ar">ارتفاع بدرجة الحرارة</string>
+    <string name="dialog_symptoms_button2_ar">الشعود بالكسل والضعف</string>
+    <string name="dialog_symptoms_button3_ar">إمساك أو إسهال</string>
+    <string name="dialog_symptoms_button4_ar">صداع</string>
+    <string name="dialog_symptoms_button5_ar">فقدان في حاسة الشم أو التذوق</string>
+    <string name="dialog_symptoms_button6_ar">الإستمرار</string>
+    // END DIALOG SYMPTOMS
+
+
+    // START DIALOG BREATH
+    <string name="dialog_breath_title_ar">هل تعاني من ضيق التنفس هذه الأيام؟</string>
+    <string name="dialog_breath_button1_ar">نعم</string>
+    <string name="dialog_breath_button2_ar">لا</string>
+    // END DIALOG BREATH
+
+
+    // START DIALOG CLOSE CONTACT
+    <string name="dialog_closecontact_title_ar">هل سبق تواصلت مع شخص ثبتت إصابته بكوفيد١٩ ؟</string>
+    <string name="dialog_closecontact_text1_ar"> هل تعيش مع شخص ثبتت إصابته بكوفيد١٩؟</string>
+    <string name="dialog_closecontact_text2_ar"> هل تتواصل مع الشخص المصاب بشكل مباشر (اللمس او المصافحة..الخ)؟</string>
+    <string name="dialog_closecontact_text3_ar">التواصل وجهاً لوجه خلال أقل من متر ونصف لمدة أطول من ١٥ دقيقة</string>
+    <string name="dialog_closecontact_button1_ar">نعم</string>
+    <string name="dialog_closecontact_button2_ar">لا</string>
+    // END DIALOG CLOSE CONTACT
+
+
+    // START EXTRA
+    <string name="record_screen_button_status1_ar">اابدء الآن</string>
+    <string name="record_screen_button_status2_ar">إيقاف</string>
+    <string name="record_screen_button_status3_ar">تم التحميل</string>
+    <string name="record_screen_button_status4_ar">جارٍ التحميل ...</string>
+    <string name="record_screen_button_status5_ar">تسجيل...</string>
+    <string name="record_screen_toast1_ar">اضغط لمدة أطول!</string>
+    <string name="record_screen_toast2_ar">تمت مشاركتكم بنجاح.. شكرا لكم</string>
+    <string name="record_screen_toast3_ar">بدأ التسجيل</string>
+    <string-array name="gender_array_ar">
+        <item>الذكر</item>
+        <item>أنثى</item>
+    </string-array>
 </resources>
