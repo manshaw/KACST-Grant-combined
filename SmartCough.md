@@ -10,9 +10,6 @@ Userflow is simple and can be divided into following four steps,
 1. After recording successfully, survey is opened in a pop-up window with some basic questions after which audio is finally submitted.
 1. Submitted audio is then processed online and result is showed in a pop-up window.
 
-## Screens
-![Screen Shots](/app/src/main/res/drawable/screens.png)
-
 ## Firebase
 We are using following firebase features,
 - Storage
