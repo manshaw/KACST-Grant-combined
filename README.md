@@ -2,19 +2,19 @@
 This app is the combined version of three individual apps. 
 
 1. FreMEn
-    * [readme](https://github.com/manshaw/Covid-Combine/blob/master/FreMEn.md)
+    * [readme](https://github.com/manshaw/Covid-Care/blob/master/FreMEn.md)
     * [website](http://ncra.org.pk/FreMEn/)
     * [github](https://github.com/manshaw/FreMEn)
 1. Smart Cough 
-    * [readme](https://github.com/manshaw/Covid-Combine/blob/master/SmartCough.md)
+    * [readme](https://github.com/manshaw/Covid-Care/blob/master/SmartCough.md)
     * [website](https://ncra.org.pk/SmartCough/)
     * [github](https://github.com/manshaw/Cough-Covid-Android)
 1. Covid Tracing 
-    * [readme](https://github.com/manshaw/Covid-Combine/blob/master/CovidTracing.md)
+    * [readme](https://github.com/manshaw/Covid-Care/blob/master/CovidTracing.md)
     * [github](https://github.com/daudahmed/BlueProximity)
     
 # Screens Animation
-![Animation](https://github.com/manshaw/Covid-Combine/blob/master/CovidCombine.gif)
+![Animation](https://github.com/manshaw/Covid-Care/blob/master/CovidCombine.gif)
 
 ## FreMEn
 We propose a smarter preventive measure by an AI based mechanism that regulates the number of people in an area at any instance of time. FreMEn app “Nebojsa” will advice you when to visit a public place, through its AI based FreMEn engine that will predict precisely where will the crowd form.
