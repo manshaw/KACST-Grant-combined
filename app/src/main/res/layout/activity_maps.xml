@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MapActivity">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cl_places"
+        app:layout_constraintTop_toBottomOf="@+id/llAutoCompleteSearchBar" />
+
+    <ImageView
+        android:id="@+id/search_background"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/search_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llAutoCompleteSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout_rounded_corners_white_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/icon_search_bar"-->
+        <!--            android:layout_width="20dp"-->
+        <!--            android:layout_height="20dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginTop="6dp"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/ic_search"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textColor="@android:color/white" />-->
+
+
+        <AutoCompleteTextView
+            android:id="@+id/tvLocationSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_search"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:hint="@string/select_place_search_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="textPostalAddress"
+            android:maxLength="65"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:privateImeOptions="nm"
+            android:textAlignment="center"
+            android:textColor="#555"
+            android:textColorHint="#999"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/ivClearSearchText"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/ic_clear_fields"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/no_places_back"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cl_places"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="240dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/ic_more"
+            android:elevation="7dp"
+            app:layout_constraintEnd_toEndOf="@+id/cl_places"
+            app:layout_constraintStart_toStartOf="@+id/cl_places"
+            app:layout_constraintTop_toTopOf="@+id/cl_places" />
+
+        <ScrollView
+            android:id="@+id/showscroll"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="@id/cl_places"
+            app:layout_constraintEnd_toEndOf="@+id/cl_places"
+            app:layout_constraintStart_toStartOf="@+id/cl_places"
+            app:layout_constraintTop_toTopOf="@id/more">
+
+            <ListView
+                android:id="@+id/listplaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/places_back"
+                android:visibility="visible" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:text="Search your place and then nearby places will be shown here."
+            android:textSize="20dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cl_places"
+            app:layout_constraintTop_toTopOf="@+id/cl_places" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/next1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:src="@drawable/ic_arrow_forward_black_24dp"
+            android:visibility="gone"
+            app:backgroundTint="#F59662"
+            app:layout_constraintBottom_toTopOf="@+id/cl_places"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView-->
+    <!--        android:id="@+id/bottomNav"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="#fff"-->
+    <!--        android:elevation="4dp"-->
+    <!--        android:foregroundGravity="center"-->
+    <!--        android:padding="12dp"-->
+    <!--        app:bnc_mode="spread"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--        <com.gauravk.bubblenavigation.BubbleToggleView-->
+    <!--            android:id="@+id/item_places"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:bt_active="true"-->
+    <!--            app:bt_colorActive="#009688"-->
+    <!--            app:bt_colorInactive="#CCCCCC"-->
+    <!--            app:bt_icon="@drawable/ic_places"-->
+    <!--            app:bt_padding="10dp"-->
+    <!--            app:bt_shape="@drawable/trasition_background"-->
+    <!--            app:bt_title="Places"-->
+    <!--            app:bt_titlePadding="5dp" />-->
+
+    <!--        <com.gauravk.bubblenavigation.BubbleToggleView-->
+    <!--            android:id="@+id/item_help"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:bt_active="false"-->
+    <!--            app:bt_colorActive="#009688"-->
+    <!--            app:bt_colorInactive="#CCCCCC"-->
+    <!--            app:bt_icon="@drawable/ic_help"-->
+    <!--            app:bt_padding="10dp"-->
+    <!--            app:bt_shape="@drawable/trasition_background"-->
+    <!--            app:bt_title="Help"-->
+    <!--            app:bt_titlePadding="5dp" />-->
+
+    <!--        &lt;!&ndash; Add more child items here - max upto 5 &ndash;&gt;-->
+
+    <!--    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>-->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

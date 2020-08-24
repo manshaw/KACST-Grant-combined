@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+        android:id="@+id/cl_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="10dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="3.5"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tv_placeName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:gravity="left|bottom"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="Place Name"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_placeAddress"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_address"
+                android:drawablePadding="10dp"
+                android:ellipsize="marquee"
+                android:gravity="left|center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="Place Street Adress"
+                android:textColor="#818181"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_bestTime"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_besttime_active"
+                android:drawablePadding="5dp"
+                android:gravity="top|left"
+                android:text="16:25"
+                android:textColor="#4CAF50"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.5"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/addPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@drawable/add_btn_back"
+                android:drawableLeft="@drawable/ic_add_place"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:paddingLeft="13dp"
+                android:paddingRight="15dp"
+                android:text="@string/Add_button_ar"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/cl_remove"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHeight_default="percent"-->
+    <!--        app:layout_constraintHeight_percent=".47"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/cl_remove"-->
+    <!--        app:layout_constraintWidth_percent=".35">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/addPlace"-->
+    <!--            android:layout_width="70dp"-->
+    <!--            android:layout_height="32dp"-->
+    <!--            android:layout_gravity="bottom"-->
+    <!--            android:layout_marginEnd="10dp"-->
+    <!--            android:background="@drawable/intro_button_background"-->
+    <!--            android:drawableStart="@drawable/ic_add_place"-->
+    <!--            android:fontFamily="@font/rubik_medium"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="Add"-->
+    <!--            android:textColor="#FFFFFF"-->
+    <!--            android:textSize="12sp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/cl_remove"-->
+    <!--            app:layout_constraintEnd_toEndOf="@+id/cl_remove" />-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/cl_day"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/llheader"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHeight_default="percent"-->
+    <!--        app:layout_constraintHeight_percent=".43"-->
+    <!--        app:layout_constraintWidth_percent=".35">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tvdayGraph"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_marginBottom="5dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="Today"-->
+    <!--            android:textColor="@android:color/black"-->
+    <!--            android:textSize="14sp"-->
+    <!--            android:visibility="gone"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/cl_day"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent" />-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
