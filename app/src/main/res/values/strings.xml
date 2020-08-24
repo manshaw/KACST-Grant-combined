@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <resources>
-    <string name="app_name">Proxim</string>
+    <string name="app_name">Covid Care</string>
     <string name="login_try_again">check the phone number</string>
     <string name="notification_title">Proxim is active</string>
     <string name="notification_title_error">Proxim is not active</string>

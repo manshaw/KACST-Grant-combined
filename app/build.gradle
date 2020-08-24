@@ -125,6 +125,8 @@ dependencies {
     implementation "androidx.browser:browser:1.2.0"
     implementation 'com.android.support:cardview-v7:28.0.0'
 
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
     // Arch
     implementation project(':arch')
 
